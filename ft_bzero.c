@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 16:19:46 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/10 17:17:33 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/14 18:51:28 by kkawano       no   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int ft_bzero(void *s, size_t n)
 	{
 		s++;
 		if (s != 0)
-		    s = '\0';
+		    s = '0';
 		else(n == 0)
-			return;
+			return 0;
 	}
 }
