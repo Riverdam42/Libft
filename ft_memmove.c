@@ -6,11 +6,13 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 19:38:05 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/10 20:18:36 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/17 13:27:37 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memmove(void *buf1, const void *buf2, size_t n)
+#include <libft.h>
+
+void *ft_memmove(void *buf1, const void *buf2, size_t n)
 {
 	char *obj1 = (char *)buf1;
 	const char *obj2 = (const char *)buf2;

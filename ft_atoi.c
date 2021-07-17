@@ -6,9 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:28:11 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/10 15:28:06 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/17 13:25:41 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 int		ft_atoi(char *str)
 {

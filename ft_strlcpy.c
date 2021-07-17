@@ -6,11 +6,13 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 21:20:44 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/11 15:13:39 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/17 13:29:02 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t strlcpy (char *dst, const char *src, size_t size)
+#include <libft.h>
+
+size_t ft_strlcpy (char *dst, const char *src, size_t size)
 {
 	char obj1 = (char *)dst;
 	const char obj2 = (char *)src;
