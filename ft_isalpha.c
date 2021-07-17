@@ -6,14 +6,16 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 12:21:33 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/10 17:17:35 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/17 13:26:20 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 int ft_isalpha(int c)
 {
 	if ((c < 'A' || c > 'Z') && (c < 'a' || c > 'z'))
-			return(0);
+			return (0);
 	else
-			return(1);
+			return (1);
 }

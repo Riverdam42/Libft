@@ -6,11 +6,13 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:33:50 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/12 13:52:25 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/17 13:28:25 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strchr (const char *s, int c)
+#include <libft.h>
+
+char *ft_strchr (const char *s, int c)
 {
 	char s = (char *)s;
 

@@ -6,9 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:26:50 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/14 19:49:00 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/17 13:28:51 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 unsigned	int	ft_strlcat(char *dest, char *src, unsigned int size)
 {

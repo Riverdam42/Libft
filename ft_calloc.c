@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 16:22:33 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/15 10:40:58 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/15 15:12:55 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void *malloc(size_t size);
 
-void *calloc(size_t count, size_t size)
+void *ft_calloc(size_t count, size_t size)
 {
 	char *str;
 	int i;
