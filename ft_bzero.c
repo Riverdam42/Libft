@@ -14,13 +14,16 @@
 
 void ft_bzero(void *s, size_t n)
 {
-	char s[];
-	while (s != '\0')
+	char p;
+	int i;
+
+	p = (void *)s;
+	if (n == 0)
+			; //何もしない
+	i = 0;
+	while (p[i] != '\0' && i < n)
 	{
-		s++;
-		if (n == 0)
-			return 0;
-		else (s != 0)
-		    *s = '\0';
+		p = '\0';
+		i++;
 	}
 }

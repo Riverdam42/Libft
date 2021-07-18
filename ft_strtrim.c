@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:04:53 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/17 13:30:14 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 11:57:21 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char *ft_strtrim(char const *s1, char const *set)
 {
-
+	
 }
