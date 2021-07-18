@@ -6,11 +6,9 @@
 #    By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/15 11:01:26 by kkawano           #+#    #+#              #
-#    Updated: 2021/07/18 20:16:05 by kkawano          ###   ########.fr        #
+#    Updated: 2021/07/18 20:24:47 by kkawano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-NAME = libft.a
 
 SRCS = srcs/ft_atoi.c\
 		srcs/ft_bzero.c\
@@ -48,6 +46,8 @@ SRCS = srcs/ft_atoi.c\
 
 OBJS = ${SRCS:.c=.o}
 
+NAME = libft.a
+
 INC = includes
 
 CC = gcc
@@ -70,4 +70,4 @@ fclean: clean
 
 re: fclean $(NAME)
 
-.PHONY: alll clean fclean re bonus
+.PHONY: all clean fclean re bonus
