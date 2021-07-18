@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 17:40:02 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/17 13:30:33 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/17 19:38:40 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int ft_tolower(int c)
 	if (c < 'A' || c > 'Z')
 		return c + 0x20;
 	else
-		return c;
+		return (c);
 }

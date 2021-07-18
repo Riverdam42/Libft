@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 16:05:41 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/17 13:26:54 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 12:34:48 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int ft_isprint(int c)
 {
-	if (c < '0x20' || c > '0x7e')
-			return(0);
-	else
+	if (c > '0x7e' || c > '0x20')
 			return(1);
+	else
+			return(0);
 }

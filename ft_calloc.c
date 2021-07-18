@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 16:22:33 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/15 15:12:55 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 12:12:45 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,12 @@ void *ft_calloc(size_t count, size_t size)
 	{
 		i++;
 	if (str == NULL) //ヒープメモリ確保に失敗した場合
-		return NULL;
+		return (NULL);
 	else  //ゼロクリアする場合
-		char str[] = {"\0"};
+		char str[] = "\0";
 		return 0;
 	}
 	free (str);
 }
+
+//ft_memset (str, "\0", count * size);
