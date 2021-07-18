@@ -6,11 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:25:40 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/17 13:29:28 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 18:03:14 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {

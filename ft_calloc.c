@@ -6,13 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 16:22:33 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 12:12:45 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 19:32:48 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
-void *malloc(size_t size);
+#include "libft.h"
 
 void *ft_calloc(size_t count, size_t size)
 {

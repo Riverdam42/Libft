@@ -6,11 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 21:20:44 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/17 13:29:02 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 18:02:46 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t ft_strlcpy (char *dst, const char *src, size_t size)
 {
