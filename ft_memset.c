@@ -6,11 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 16:07:20 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 12:49:32 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 17:59:49 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int ft_memset(void *buf, int ch, size_t n)
 {

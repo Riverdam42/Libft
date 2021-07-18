@@ -6,11 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 17:41:29 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/17 13:30:01 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 18:03:31 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char *ft_strrchr(const char *s, int c)
 {

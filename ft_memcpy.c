@@ -6,11 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 19:12:40 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/17 13:23:21 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 17:59:24 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void *ft_memcpy(void *buf1, const void *buf2, size_t n)
 {

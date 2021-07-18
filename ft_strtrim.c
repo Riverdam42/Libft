@@ -6,13 +6,13 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:04:53 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 11:57:21 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 18:03:41 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char *ft_strtrim(char const *s1, char const *set)
 {
-	
+
 }

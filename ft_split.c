@@ -6,11 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:07:47 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/17 19:04:34 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 18:00:49 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "stdlib.h"
 
 int		search_flag(char key, char *charset)
 {

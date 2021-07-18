@@ -6,11 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 19:38:05 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/17 13:27:37 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/18 17:59:33 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void *ft_memmove(void *buf1, const void *buf2, size_t n)
 {
