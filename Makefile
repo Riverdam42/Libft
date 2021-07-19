@@ -6,9 +6,11 @@
 #    By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/15 11:01:26 by kkawano           #+#    #+#              #
-#    Updated: 2021/07/18 20:24:47 by kkawano          ###   ########.fr        #
+#    Updated: 2021/07/18 21:10:51 by kkawano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME = libft.a
 
 SRCS = srcs/ft_atoi.c\
 		srcs/ft_bzero.c\
@@ -45,8 +47,6 @@ SRCS = srcs/ft_atoi.c\
 		src/ft_toupper.c\
 
 OBJS = ${SRCS:.c=.o}
-
-NAME = libft.a
 
 INC = includes
 

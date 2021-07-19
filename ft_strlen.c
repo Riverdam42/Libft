@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:22:05 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 18:02:56 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/19 13:00:20 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int			ft_strlen(char *str)
 	{
 		length++;
 	}
-	return (count);
+	return (length);
 }

@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:10:38 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 18:03:05 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/19 13:00:45 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int i;
 
 	length = ft_strlen((char *)s);
-	p = if(char *)malloc(sizeof(length + 1));
+	p = (char *)malloc(sizeof(length + 1));
 	if (p == NULL)
 		return (NULL);
 	while (i++)
 	{
-		p = (*f)(i, s[i])
+		p = (*f)(i, s[i]);
 	}
 	return (p);
 }
