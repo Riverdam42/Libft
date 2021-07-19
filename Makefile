@@ -6,7 +6,7 @@
 #    By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/15 11:01:26 by kkawano           #+#    #+#              #
-#    Updated: 2021/07/18 21:10:51 by kkawano          ###   ########.fr        #
+#    Updated: 2021/07/19 13:12:28 by kkawano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,11 +56,11 @@ CFLAGS = -Wall -Werror -Wextra
 
 RM = rm -f
 
+all: ${NAME}
+
 $(NAME): $(OBJS)
 			ar rc $(NAME) $(OBJS)
 			ranlib $(NAME)
-
-all: $(NAME)
 
 clean:
 	$(RM) $(OBJS)
