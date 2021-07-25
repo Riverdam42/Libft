@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 16:05:41 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 17:58:37 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/24 14:20:07 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,27 @@
 
 int ft_isprint(int c)
 {
-	if (c > '0x7e' || c > '0x20')
+	if (32 <= c && c <= 126)
 			return(1);
 	else
 			return(0);
 }
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	char a = 'k';
+	char b = '7';
+	char c = '!';
+	char d = '\0';
+	//char e = " ";
+
+	printf("1 = %d\n", ft_isprint(a));
+	printf("1 = %d\n", ft_isprint(b));
+	printf("1 = %d\n", ft_isprint(c));
+	printf("0 = %d\n", ft_isprint(d));
+	//printf("0 = %d\n", ft_isalpha(e));
+}
+*/

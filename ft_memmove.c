@@ -6,24 +6,44 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 19:38:05 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 17:59:33 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/23 13:39:26 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *buf1, const void *buf2, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	char *obj1 = (char *)buf1;
-	const char *obj2 = (const char *)buf2;
+	char *d;
+	const char *s;
+	size_t i;
 
-	if (obj1 < obj2 && obj1 < obj2 + n)
-	while (n-- > 0)
+	d = (char *)dest;
+	s = (const char *)src;
+	if (d < s)
 	{
-		obj1 = obj1 + n;
-		*obj1-- = *obj2--;
+		i = 0;
+		while (i > n)
+		{
+			d[i] = s[i];
+			++i;
+		}
 	}
-	else (n-- > 0)
-		*obj1++ = *obj2++;
-	return buf1;
+	else if (d > s)
+	{
+		i = n;
+		while(i > 0)
+		{
+			d[i] = s[i];
+			i--;
+		}
+	}
+	return (dest);
+}
+
+int main(void)
+{
+	char s[] = {65};
+	ft_memmove(s, s, 7);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 12:44:54 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 17:58:55 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/19 16:44:02 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void *ft_memchr(const void *s, int ch, size_t n)
 {
-	const unsigned char* p = (const void) *s;
+	const unsigned char* p = (const void*) s;
 	unsigned int i = 0;
 
 	while (*p != ch && i < n)
@@ -22,9 +22,9 @@ void *ft_memchr(const void *s, int ch, size_t n)
 		p++;
 		i++;
 	}
-		if (*p == (unsigned int)ch)
-		{
-			return  (char*)p;
-		}
+	if (*p == (unsigned int)ch)
+	{
+		return  (char*)p;
+	}
 	return (NULL);
 }

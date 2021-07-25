@@ -6,41 +6,13 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:03:26 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 18:01:35 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/22 20:35:26 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_strlen(char *str)
-{
-	int count;
-
-	count = 0;
-	while (str[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
-
-int			total_size(int size, char **strs, char *sep)
-{
-	int	num;
-	int	total;
-
-	num = 0;
-	total = 0;
-	while (num < size)
-	{
-		total += ft_strlen(strs[num]);
-		num++;
-	}
-	total = total + (ft_strlen(sep) * (size - 1)) + 1;
-	return (total);
-}
-
-char		*ft_strcat(char *dest, char *src)
+char		*ft_strcat(char *dest, char *s2)
 {
 	int a;
 	int b;
@@ -51,9 +23,9 @@ char		*ft_strcat(char *dest, char *src)
 	{
 		a++;
 	}
-	while (src[b] != '\0')
+	while (s2[b] != '\0')
 	{
-		dest[a] = src[b];
+		dest[a] = s2[b];
 		a++;
 		b++;
 	}
@@ -61,30 +33,35 @@ char		*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-void		*ft_strjoin(int size, char **strs, char *sep)
+char 	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		num;
-	char	*result;
+	size_t i;
+	size_t j;
+	size_t total_size;
+	char *result;
 
-	if (size == 0)
-	{
-		result = malloc(0);
-		*result = 0;
-		return (result);
-	}
-	if (!(result = malloc(sizeof(char) * total_size(size, strs, sep))))
+	if (!s1 || !s2)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+		i++;
+	j = 0;
+	while (s2[j])
+		j++;
+	total_size =  i + j;
+	if (!(result = malloc(sizeof(char) * (total_size + 1))))
 		return (0);
 	*result = 0;
-	num = 0;
-	while (num < size)
+	while (i < total_size)
 	{
-		ft_strcat(result, strs[num]);
-		if (num < size - 1)
+		ft_strcat(result, (char *)s1 + i);
+		if (i < total_size - 1)
 		{
-			ft_strcat(result, sep);
+			ft_strcat(result, ((char *)s2));
 		}
-		num++;
+		i++;
 	}
-	result[ft_strlen(result)] = '\0';
+	i = ft_strlen(result);
+	result[i] = '\0';
 	return (result);
 }

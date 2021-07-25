@@ -6,45 +6,45 @@
 #    By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/15 11:01:26 by kkawano           #+#    #+#              #
-#    Updated: 2021/07/19 13:12:28 by kkawano          ###   ########.fr        #
+#    Updated: 2021/07/22 20:23:22 by kkawano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = srcs/ft_atoi.c\
-		srcs/ft_bzero.c\
-		srcs/ft_calloc.c\
-		srcs/ft_isalnum.c\
-		srcs/ft_isalpha.c\
-		src/ft_isascii.c\
-		src/ft_isdigit.c\
-		src/ft_isprint.c\
-		src/ft_itoa.c\
-		src/ft_memchr.c\
-		src/ft_memcmp.c\
-		src/ft_memmove.c\
-		src/ft_memset.c\
-		src/ft_putchar_fd.c\
-		src/ft_putendl_fd.c\
-		src/ft_putnbr_fd.c\
-		src/ft_putstr_fd.c\
-		src/ft_split.c\
-		src/ft_strchr.c\
-		src/ft_strdup.c\
-		src/ft_striteri.c\
-		src/ft_strjoin.c\
-		src/ft_strlcat.c\
-		src/ft_strcpy.c\
-		src/ft_strlen.c\
-		src/ft_strmapi.c\
-		src/ft_strcmp.c\
-		src/ft_strnstr.c\
-		src/ft_strrchr.c\
-		src/ft_strtrim.c\
-		src/ft_substr.c\
-		src/ft_tolower.c\
-		src/ft_toupper.c\
+SRCS = ft_atoi.c\
+		ft_bzero.c\
+		ft_calloc.c\
+		ft_isalnum.c\
+		ft_isalpha.c\
+		ft_isascii.c\
+		ft_isdigit.c\
+		ft_isprint.c\
+		ft_memchr.c\
+		ft_memcmp.c\
+		ft_memcpy.c\
+		ft_memmove.c\
+		ft_memset.c\
+		ft_putchar_fd.c\
+		ft_putendl_fd.c\
+		ft_putnbr_fd.c\
+		ft_putstr_fd.c\
+		ft_split.c\
+		ft_strchr.c\
+		ft_strdup.c\
+		ft_strncmp.c\
+		ft_striteri.c\
+		ft_strlcat.c\
+		ft_strlcpy.c\
+		ft_strlen.c\
+		ft_strjoin.c\
+		ft_strtrim.c\
+		ft_strmapi.c\
+		ft_strnstr.c\
+		ft_strrchr.c\
+		ft_substr.c\
+		ft_tolower.c\
+		ft_toupper.c\
 
 OBJS = ${SRCS:.c=.o}
 
@@ -54,20 +54,20 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-RM = rm -f
+RM = rm -f *.o
 
 all: ${NAME}
 
 $(NAME): $(OBJS)
 			ar rc $(NAME) $(OBJS)
-			ranlib $(NAME)
 
 clean:
 	$(RM) $(OBJS)
 
+
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean $(NAME)
+re: fclean all
 
 .PHONY: all clean fclean re bonus

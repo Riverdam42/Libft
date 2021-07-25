@@ -6,20 +6,35 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:22:05 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/19 13:00:20 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/23 19:34:22 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_strlen(char *str)
+size_t			ft_strlen(const char *str)
 {
-	int length;
+	size_t len;
 
-	length = 0;
-	while (str[length] != '\0')
+	len = 0;
+	while (str[len] != '\0')
 	{
-		length++;
+		len++;
 	}
-	return (length);
+	return (len);
 }
+
+/*#include <stdio.h>
+
+int		 main(void)
+{
+	char    str[] = "kawano";
+	char    *s;
+	int number;
+
+	s = str;
+	number = 0;
+	number = ft_strlen(s);
+	printf("文字の長さ=%d\n", number);
+}
+*/
