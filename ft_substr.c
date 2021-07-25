@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:01:17 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 18:03:52 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/21 13:33:19 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*result;
 
-	len = ft_strlen(s) - start;
+	len = ft_strlen ((char *)s) - start;
 	result = (char *)malloc(sizeof(char) * (len) + 1);
 	if (result == NULL)
 		return NULL;
 	ft_strlcpy(result, s + start, len + 1);
+	return (result);
 }
