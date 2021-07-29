@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 19:38:05 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/23 13:39:26 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/26 16:59:21 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,30 +20,44 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 
 	d = (char *)dest;
 	s = (const char *)src;
-	if (d < s)
+	if (!dest && !src)
+		return (NULL);
+	if (n != 0)
 	{
-		i = 0;
-		while (i > n)
+		if (d < s)
 		{
-			d[i] = s[i];
-			++i;
+			i = 0;
+			while (i < n)
+			{
+				d[i] = s[i];
+				i++;
+			}
 		}
-	}
-	else if (d > s)
-	{
-		i = n;
-		while(i > 0)
+		else if (d > s)
 		{
-			d[i] = s[i];
-			i--;
+			i = n;
+			while(i > 0)
+			{
+				d[i - 1] = s[i - 1];
+				i--;
+			}
 		}
 	}
 	return (dest);
 }
 
-int main(void)
+/*
+#include <stdio.h>
+
+int	main(void)
 {
-	char s[] = {65};
-	ft_memmove(s, s, 7);
-	return (0);
+	char str[10] = "12345678";
+	char str2[10] = "12345678";
+
+	memmove(&str[2], &str[0], 5);
+	printf("本家 = %s\n", str);
+	printf("\n");
+	ft_memmove(&str2[2], &str2[0], 5);
+	printf("自作 = %s\n", str2);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:22:05 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/23 19:34:22 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/26 12:29:34 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ size_t			ft_strlen(const char *str)
 	return (len);
 }
 
-/*#include <stdio.h>
+/*
+#include <stdio.h>
 
 int		 main(void)
 {

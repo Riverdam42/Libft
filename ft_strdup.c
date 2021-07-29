@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 14:47:53 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/21 19:49:30 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/26 19:44:13 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,39 @@
 
 char		*ft_strcpy(char *dest, char *src)
 {
-	int index;
+	int i;
 
-	index = 0;
-	while (src[index] != '\0')
+	i = 0;
+	while (src[i] != '\0')
 	{
-		dest[index] = src[index];
-		index++;
+		dest[i] = src[i];
+		i++;
 	}
-	dest[index] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 
 char		*ft_strdup(char *src)
 {
 	char	*result;
-	int		size;
 
-	size = ft_strlen(src);
-	result = (char *)malloc(sizeof(char) * (size + 1));
+	if(!(result = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1))))
+		return (0);
 	result = ft_strcpy(result, src);
 	return (result);
 }
+
+/*
+#include <stdio.h>
+int main(void)
+{
+	char *p;
+	char result[] = "abcdefg";
+	p = ft_strdup(result);
+	result[0] = 'z';
+
+	printf("%s\n", result);
+	printf("%s\n", p);
+
+}
+*/

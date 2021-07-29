@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:26:50 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/24 14:44:30 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/25 16:16:48 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ size_t	ft_strlcat(char *dest, char *src, unsigned int dstsize)
 	return (len1 + len2);
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -59,3 +60,4 @@ int main(void)
     printf("自作 = %s\n", str3);
     return (0);
 }
+*/
