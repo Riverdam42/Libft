@@ -6,27 +6,49 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:25:40 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 18:03:14 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/26 20:55:02 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+int		ft_strncmp(char *s1, char *s2, size_t n)
 {
-	unsigned	int	num;
+	size_t	i;
 
-	num = 0;
+	i = 0;
 	if (n == 0)
 	{
 		return (0);
 	}
-	while (num < n)
+	while (i < n)
 	{
-		if (s1[num] == s2[num] && s1[num] != '\0' && s2[num] != '\0')
-			num++;
+		if (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+			i++;
 		else
-			return (s1[num] - s2[num]);
+			return (s1[i] - s2[i]);
 	}
 	return (0);
 }
+
+/*
+#include <stdio.h>
+
+int		main(void)
+{
+	char str1[] = "TOKYO";
+	char str2[] = "TOKYH";
+	char str3[] = "TO";
+
+	ft_strncmp(str1, str1, 5);
+	printf("%s,%s\n", str1, str1);
+	printf("%d\n", ft_strncmp(str1, str1, 5));
+	ft_strncmp(str1, str2, 4);
+	printf("%s,%s\n", str1, str2);
+	printf("%d\n", ft_strncmp(str1, str2, 4));
+	ft_strncmp(str1, str3, 2);
+	printf("%s,%s\n", str1, str3);
+	printf("%d\n", ft_strncmp(str1, str3, 2));
+	return (0);
+}
+*/

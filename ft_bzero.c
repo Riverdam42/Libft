@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 16:19:46 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/25 13:56:47 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/25 14:58:13 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	ft_bzero(void *s, size_t n)
 
 int main(void)
 {
-	void *s = "aaaaa";
-	size_t n = '5';
-
+	char tab[100];
+	printf("%d\n", ft_bzero(tab, 88));
+	return (0);
 }
 */

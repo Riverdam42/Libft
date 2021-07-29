@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:09:51 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/18 17:58:45 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/28 15:38:09 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 char *ft_itoa(int n)
 {
+	char *str;
+	long size;
 
+	size = ft_strlrn(n);
+	str = malloc(sizeof(char) * (size + 1));
+	
 }

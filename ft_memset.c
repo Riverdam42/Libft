@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 16:07:20 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/25 14:36:42 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/26 12:30:10 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ int		main(void)
 	char tab[100];
 	result = ft_memset(tab, 'A', 0);
 	printf("%d\n",result);
-
 
 	//oid *buf = '0123456789';
 	//result = memset((buf+2, '*', 5);

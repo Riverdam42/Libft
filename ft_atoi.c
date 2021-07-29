@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:28:11 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/25 12:57:27 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/07/28 14:59:13 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,31 @@ int		ft_atoi(char *str)
 {
 	int res;
 	int sign;
-	int num;
+	int i;
 
 	res = 0;
 	sign = 1;
-	num = 0;
-	while ((str[num] == ' ') || (str[num] == '\t') || (str[num] == '\n') ||
-			(str[num] == '\v') || (str[num] == '\r') || (str[num] == '\f'))
-		num++;
-	while (str[num] != '\0' && ((str[num] == '+') || (str[num] == '-')))
+	i = 0;
+	while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n') ||
+			(str[i] == '\v') || (str[i] == '\r') || (str[i] == '\f'))
+		i++;
+	while (str[i] != '\0' && ((str[i] == '+') || (str[i] == '-')))
 	{
-		if (str[num] == '-')
+		if (str[i] == '-')
 			sign = sign * -1;
-		num++;
+		i++;
 	}
-	while (str[num] != '\0' && ((str[num] >= '0') && (str[num] <= '9')))
+	while (str[i] != '\0' && ((str[i] >= '0') && (str[i] <= '9')))
 	{
 		res = res * 10;
-		res = res + str[num] - '0';
-		num++;
+		res = res + str[i] - '0';
+		i++;
 	}
 	res = res * sign;
 	return ((int)res);
 }
 
+/*
 #include <stdio.h>
 
 int		main(void)
@@ -64,3 +65,4 @@ int		main(void)
 	printf("%d\n", ft_atoi(str8));
 	printf("%d\n", ft_atoi(str9));
 }
+*/
