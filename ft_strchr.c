@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:33:50 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/24 17:17:52 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/03 22:49:23 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char *ft_strchr(const char *s, int c)
 {
 	if (!s || !c)
 		return (NULL);
+
 	while (*s != '\0' && *s != c)
 	{
 		s++;
