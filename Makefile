@@ -6,7 +6,7 @@
 #    By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/15 11:01:26 by kkawano           #+#    #+#              #
-#    Updated: 2021/07/22 20:23:22 by kkawano          ###   ########.fr        #
+#    Updated: 2021/08/03 15:34:16 by kkawano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,23 @@ SRCS = ft_atoi.c\
 		ft_tolower.c\
 		ft_toupper.c\
 
+SRCS_B =	ft_lstnew.c\
+			ft_lstadd_front.c\
+			ft_lstsize.c\
+			ft_lstlast.c\
+			ft_lstadd_back.c\
+			ft_lstdelone.c\
+			ft_lstclear.c\
+			ft_lstiter.c\
+			ft_lstmap.c
+
 OBJS = ${SRCS:.c=.o}
+
+OBJS_B = $(SRCS_B:.c=.o)
+
+ifdef WITH_BONUS
+OBJS +=		$(OBJS_B)
+endif
 
 INC = includes
 
@@ -69,5 +85,8 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+bonus:
+			make WITH_BONUS=1
 
 .PHONY: all clean fclean re bonus
