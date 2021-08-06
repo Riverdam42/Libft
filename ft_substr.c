@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:01:17 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/05 23:07:41 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/07 03:29:47 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	char	*new_str;
 	if (s == NULL)
 		return (NULL);
-	if (len == 0)
-		return "";
-	// if ((unsigned int)ft_strlen(s) <= start)
-	// 	return (ft_strdup(""));
-	len = ft_strlen ((char *)s) - start;
+	else if (ft_strlen(s) - start <= len)
+		len = ft_strlen (s) - start;
+	else if ((unsigned int)ft_strlen(s) <= start)
+		return (ft_strdup(""));
 	new_str = (char *)malloc(sizeof(char) * (len) + 1);
 	if (new_str == NULL)
 		return (NULL);
@@ -30,8 +29,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	return (new_str);
 }
 
-int		main(void)
-{
-	char * s = ft_substr("tripouille", 0, 42000);
-	printf("%s\n", s);
-}
+// int		main(void)
+// {
+// 	char *s = ft_substr("42", 0, 0);
+// 	printf("1 = %s\n", s);
+// }

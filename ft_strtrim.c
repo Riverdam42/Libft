@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:04:53 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/04 16:05:47 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/07 01:45:37 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,19 @@ char *ft_strtrim(char const *s1, char const *set)
 	}
 	return ((char *)new_str);
 }
+// char *ft_strtrim(char const *s1, char const *set)
+// {
+// 	size_t s1_len;
+// 	size_t i;
+
+// 	s1_len = ft_strlen(s1);
+// 	while(s1)
+// 	{
+// 		memchr(s1, set[i], s1_len);
+// 		i++;
+// 	}
+// 	return (substr())
+// }
 
 int main(void)
 {
