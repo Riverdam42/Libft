@@ -6,45 +6,67 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:33:50 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/03 22:49:23 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/06 23:31:26 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+
+// char *ft_strchr(const char *s, int c)
+// {
+// 	size_t i;
+// 	unsigned char ch;
+
+// 	ch = (unsigned char )c;
+// 	if (c == 0)
+// 		return ((char *)&s[ft_strlen(s)]);
+// 	i = 0;
+// 	while (s[i] != '\0' && s[i] != ch)
+// 	{
+// 		i++;
+// 		if (*s == ch)
+// 			return (char *)&s[i];
+// 		else
+// 			return (NULL);
+// 	}
+// 	return (NULL);
+// }
 
 char *ft_strchr(const char *s, int c)
 {
-	if (!s || !c)
-		return (NULL);
+	size_t i;
+	unsigned char ch;
 
-	while (*s != '\0' && *s != c)
+	if (c == '\0')
+		return ((char *)&s[ft_strlen(s)]);
+	ch = (unsigned char)c;
+	i = 0;
+	while (s[i] != '\0')
 	{
-		s++;
+		if (s[i] == ch)
+			return (char *)&s[i];
+		i++;
 	}
-	if (*s == c)
-		return (char *)s;
-	else
 		return (NULL);
 }
 
-/*
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int main(void)
-{
-	const char str[] = "42Tokyo";
-	int ch1 = 'T';
-	int ch2 = 't';
+// int main(void)
+// {
+// 	const char str[] = "42Tokyo";
+// 	int ch1 = 'T';
+// 	int ch2 = 't';
 
-	char *result;
-	result = strchr(str, ch1);
-	printf("本家 = %s\n", result);
-	printf("\n");
-	result = ft_strchr(str, ch1);
-	printf("自作 = %s\n", result);
+// 	char *result;
+// 	result = strchr(str, ch1);
+// 	printf("本家 = %s\n", result);
+// 	printf("\n");
+// 	result = ft_strchr(str, ch1);
+// 	printf("自作 = %s\n", result);
 
-	result = ft_strchr(str, ch2);
-	printf("文字が見つからない時 = %s\n", result);
-}
-*/
+// 	result = ft_strchr(str, ch2);
+// 	printf("文字が見つからない時 = %s\n", result);
+// }
