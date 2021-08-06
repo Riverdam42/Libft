@@ -13,6 +13,7 @@
                 "-Werror",
                 "-g",
                 "${file}",
+                "${fileDirname}/libft.a",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

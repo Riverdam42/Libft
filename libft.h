@@ -33,7 +33,7 @@ size_t      ft_strlcpy (char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dest, char *src, unsigned int size);
 char        *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		    ft_strncmp(char *s1, char *s2, size_t n);
-char        *strdup(const char *s1);
+char        *ft_strdup(const char *s1);
 char        *ft_strnstr (const char *haystack, const char *needle, size_t len);
 char        *ft_strchr(const char *s, int c);
 char        *ft_strrchr(const char *s, int c);
