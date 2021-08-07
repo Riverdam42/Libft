@@ -6,32 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:33:50 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/06 23:31:26 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/07 16:01:04 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-// char *ft_strchr(const char *s, int c)
-// {
-// 	size_t i;
-// 	unsigned char ch;
-
-// 	ch = (unsigned char )c;
-// 	if (c == 0)
-// 		return ((char *)&s[ft_strlen(s)]);
-// 	i = 0;
-// 	while (s[i] != '\0' && s[i] != ch)
-// 	{
-// 		i++;
-// 		if (*s == ch)
-// 			return (char *)&s[i];
-// 		else
-// 			return (NULL);
-// 	}
-// 	return (NULL);
-// }
 
 char *ft_strchr(const char *s, int c)
 {
