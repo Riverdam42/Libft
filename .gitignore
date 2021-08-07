@@ -3,3 +3,4 @@ libft-unit-test
 libftTester
 a.out
 *.DSYM
+*.o
