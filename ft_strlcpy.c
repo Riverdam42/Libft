@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:19:20 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/06 19:30:31 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/08 22:58:19 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,22 @@ size_t ft_strlcpy (char *dst, const char *src, size_t dstsize)
 			i++;
 	}
 	if (dstsize != 0)
-	{
 		dst[i] = '\0';
-	}
 	return (src_len);
 }
+
+// #include <stdio.h>
+
+// int     main(void)
+// {
+//     char src[] = "coucou";
+//     char dest[10]; memset(dest, 'A', 10);
+//     printf("%zu\n", ft_strlcpy(dest, src, 0));
+//     printf("%zu\n", ft_strlcpy(dest, src, 1));
+//     printf("%zu\n", ft_strlcpy(dest, src, 2));
+//     printf("%zu\n", ft_strlcpy(dest, src, -1));
+//     printf("%zu\n", ft_strlcpy(dest, "1", 0));
+// }
 
 // int        main(void)
 // {

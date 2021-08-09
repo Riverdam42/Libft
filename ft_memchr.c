@@ -6,16 +6,16 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 12:44:54 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/07 12:17:04 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/09 16:57:12 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int ch, size_t n)
+void	*ft_memchr(const void *s, int ch, size_t n)
 {
-	const unsigned char* p;
-	unsigned int i;
+	const unsigned char*	p;
+	size_t	i;
 
 	if (!s || !n)
 		return (NULL);
@@ -24,12 +24,11 @@ void *ft_memchr(const void *s, int ch, size_t n)
 	while (i <= n)
 	{
 		if (p[i] == (unsigned char)ch)
-			return  (char*)&p[i];
+			return ((char*)&p[i]);
 		i++;
 	}
 	return (NULL);
 }
-
 
 // #include <stdio.h>
 // int main(void)
