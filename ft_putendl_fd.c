@@ -6,17 +6,17 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:17:20 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/26 14:06:38 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/09 17:00:26 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int length;
+	int	length;
 
 	length = ft_strlen((char *) s);
-	write(fd, s,length);
+	write(fd, s, length);
 	write(fd, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:07:47 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/28 19:08:54 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/08 21:36:24 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,22 +107,21 @@ char	**ft_split(char *str, char *charset)
 	return (result);
 }
 
-/*
-#include <stdio.h>
-#include <stdlib.h>
 
-int		main(void)
-{
-	char	**test;
-	int		num;
+// #include <stdio.h>
+// #include <stdlib.h>
 
-	test = ft_split("abcdefg", "cf");
-	num = 0;
-	while (test[num] != '\0')
-	{
-		printf("%s\n", test[num]);
-			num++;
-	}
-	return (0);
-}
-*/
+// int		main(void)
+// {
+// 	char	**test;
+// 	int		num;
+
+// 	test = ft_split("abcabcabc", "c");
+// 	num = 0;
+// 	while (test[num] != '\0')
+// 	{
+// 		printf("%s\n", test[num]);
+// 			num++;
+// 	}
+// 	return (0);
+// }

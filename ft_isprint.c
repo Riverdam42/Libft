@@ -6,18 +6,18 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 16:05:41 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/24 14:20:07 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/09 16:24:51 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (32 <= c && c <= 126)
-			return(1);
+		return (1);
 	else
-			return(0);
+		return (0);
 }
 
 /*

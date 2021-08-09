@@ -6,16 +6,16 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 14:47:53 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/07 03:39:55 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/09 17:03:25 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*result;
-	size_t i;
+	size_t	i;
 
 	result = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (!result)

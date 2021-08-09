@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:03:26 by kkawano           #+#    #+#             */
-/*   Updated: 2021/07/28 15:36:23 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/09 16:54:34 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *new_str;
-	size_t i;
-	size_t j;
+	char	*new_str;
+	size_t	i;
+	size_t	j;
 
 	if (!s1 || !s2)
 		return (NULL);
