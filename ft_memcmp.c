@@ -6,17 +6,18 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 12:45:39 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/09 17:01:44 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/11 18:43:48 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_memcmp(const void* s1, const void* s2, size_t n)
 {
 	const char* p1;
 	const char* p2;
-	unsigned int i;
+	size_t i;
 
 	p1 = (const char *)s1;
 	p2 = (const char *)s2;
@@ -24,15 +25,19 @@ int	ft_memcmp(const void* s1, const void* s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		++i;
-		++p1;
-		++p2;
-		if (p1 == p2)
-			return 0;
-		else if (*p1 > *p2)
-			return 1;
-		else if (*p1 < *p2)
-			return -1;
+		if (p1[i] != p2[i])
+			return (p1 - p2);
+		i++;
     }
-	return (p1 - p2);
+	return (0);
 }
+
+// int main(void)
+// {
+// 	char s[] = {-128, 0, 127, 0};
+// 	char sCpy[] = {-128, 0, 127, 0};
+// 	char s2[] = {0, 0, 127, 0};
+
+// 	printf("%d\n", ft_memcmp(s, sCpy, 4));
+// 	printf("%d\n", ft_memcmp(s, s2, 0));
+// }
