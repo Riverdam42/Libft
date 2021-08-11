@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 12:44:54 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/11 16:31:00 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/12 01:00:32 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memchr(const void *s, int ch, size_t n)
 {
-	const unsigned char*	p;
+	unsigned const char*	p;
 	size_t	i;
 
 	if (!s || !n)
 		return (NULL);
-	p = (unsigned char*)s;
+	p = (unsigned const char*)s;
 	i = 0;
 	while (i <= n)
 	{
