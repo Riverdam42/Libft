@@ -6,17 +6,17 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 20:26:22 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/11 19:20:38 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/11 19:49:46 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	size_t j;
-	size_t n;
+	size_t	i;
+	size_t	j;
+	size_t	n;
 
 	n = 0;
 	while (needle[n])
@@ -35,7 +35,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 				j++;
 			}
 			if (!needle[j])
-				return((char *)haystack + i);
+				return ((char *)haystack + i);
 		}
 		i++;
 	}
@@ -58,8 +58,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 // int		main(void)
 // {
-// 	printf("needleが空文字のとき = %s\n",strnstr("kawano", "", 8));
-// 	printf("haystackにneedleがないとき = %s\n", ft_strnstr("kawano", "kawooo", 9));
-// 	printf("haystackにneedleあるとき(それ以外) = %s\n", ft_strnstr("kawanokoske", "kawano", 15));
+// 	printf("%s\n",strnstr("kawano", "", 8));
+// 	printf("%s\n", ft_strnstr("kawano", "kawooo", 9));
+// 	printf("%s\n", ft_strnstr("kawanokoske", "kawano", 15));
 // }
-
