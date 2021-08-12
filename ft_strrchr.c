@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 17:41:29 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/09 16:28:38 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/12 15:24:37 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	ch;
 
 	ch = (unsigned char )c;

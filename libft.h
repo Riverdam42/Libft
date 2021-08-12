@@ -5,6 +5,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <ctype.h>
+# include <limits.h>
 
 int			ft_atoi(char *str);
 void		ft_bzero(void *s, size_t n);

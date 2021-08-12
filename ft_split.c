@@ -6,83 +6,81 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 22:01:47 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/12 00:26:06 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/12 15:21:19 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-
-static char     *make_string(int i, int run, const char *s)
+static char	*make_string(int i, int run, const char *s)
 {
-    int index;
-    char    *string;
+	int		index;
+	char	*string;
 
-    index = 0;
-    string = malloc(sizeof(char) * (run + 1));
-    while (run > 0)
-    {
-        string[index] = s[i - run];
-        index++;
-        run--;
-    }
-    string[index] = '\0';
-    return (string);
+	index = 0;
+	string = malloc(sizeof(char) * (run + 1));
+	while (run > 0)
+	{
+		string[index] = s[i - run];
+		index++;
+		run--;
+	}
+	string[index] = '\0';
+	return (string);
 }
 
-
-static  char **chase_letter(const char *s, char **new_str, char c)
+static char	**chase_letter(const char *s, char **new_str, char c)
 {
-    int i;
-    int run;
-    int follow;
-    char *str;
+	int		i;
+	int		run;
+	int		follow;
+	char	*str;
 
-    i = 0;
-    run = 0;
-    follow = 0;
-    while (s[i] != '\0')
-    {
-        if (s[i] != c)
-            run++;
-        if ((s[i] == c || s[i + 1] == '\0') && run != 0)
-        {
-            if (s[i + 1] == '\0' && s[i] != c)
-                i++;
-            str = make_string(i, run, s);
-            new_str[follow++] = str;
-                run = 0;
-        }
-        i++;
-    }
-    return (new_str);
+	i = 0;
+	run = 0;
+	follow = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != c)
+			run++;
+		if ((s[i] == c || s[i + 1] == '\0') && run != 0)
+		{
+			if (s[i + 1] == '\0' && s[i] != c)
+				i++;
+			str = make_string(i, run, s);
+			new_str[follow++] = str;
+			run = 0;
+		}
+		i++;
+	}
+	return (new_str);
 }
 
 char 	**ft_split(char const *s, char c)
 {
-    int num;
-    char **result;
-    char **p;
-    int i;
+	int		num;
+	char	**result;
+	char	**p;
+	int		i;
 
 	if (s == '\0' || c == '\0')
-        return (NULL);
-    num = 0;
-    i = 0;
-    while (s[i] != '\0')
-    {
-        if (s[i] != c)
-        {
-            if (s[i + 1] == c  || s[i + 1] == '\0')
-            num++;
-        }
-        i++;
-    }
-    p = (char **)malloc(sizeof(char *) * (num + 1));
-    result = chase_letter(s, p, c);
-    result[num] = 0;
-    return (result);
+		return (NULL);
+	num = 0;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != c)
+		{
+			if (s[i + 1] == c || s[i + 1] == '\0')
+				num++;
+		}
+		i++;
+	}
+	p = (char **)malloc(sizeof(char *) * (num + 1));
+	result = chase_letter(s, p, c);
+	result[num] = 0;
+	return (result);
 }
 
 // int		main(void)

@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 19:38:05 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/11 18:42:45 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/12 16:56:34 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,27 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*d;
+	unsigned char		*d;
 	unsigned const char	*s;
-	size_t	i;
+	size_t				i;
 
 	d = (unsigned char *)dest;
 	s = (unsigned const char *)src;
 	if (!dest && !src)
 		return (NULL);
-	if (n != 0)
+	if (!n)
+		return (dest);
+	if (d < s)
 	{
-		if (d < s)
-		{
-			i = 0;
-			while (i < n)
-			{
-				d[i] = s[i];
-				i++;
-			}
-		}
-		else if (d > s)
-		{
-			i = n;
-			while (i > 0)
-			{
-				i--;
-				d[i] = s[i];
-			}
-		}
+		i = -1;
+		while (++i < n)
+			d[i] = s[i];
+	}
+	else if (d > s)
+	{
+		i = n;
+		while (i-- > 0)
+			d[i] = s[i];
 	}
 	return (dest);
 }
@@ -58,7 +51,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // 	return (0);
 // }
 
-//int	main(void)
+// int	main(void)
 // {
 // 	char str[10] = "12345678";
 // 	char str2[10] = "12345678";
@@ -67,5 +60,5 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // 	printf("本家 = %s\n", str);
 // 	printf("\n");
 // 	ft_memmove(&str2[2], &str2[0], 5);
-// 	printf("自作 = %s\n", str2);
+// 	printf("自作 = %s\n ", str2);
 // }
