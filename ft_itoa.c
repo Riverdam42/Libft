@@ -6,47 +6,61 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:09:51 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/11 19:39:47 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/12 17:19:15 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char *ft_itoa(int n)
+static int	count_n(size_t n)
 {
-	char *str;
-	long keta;
+	int	len;
 
-	//場合わけを入れる
-	//負の数だった場合は、keta + 2 の領域確保
-	keta = n % 10;
-	printf("%zu\n", keta);
+	len = 0;
+	while (n >= 10)
+	{
+		len++;
+		n /= 10;
+	}
+	return (len + 1);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	long	keta;
+	long	number;
+
+	number = n;
+	keta = 0;
+	if (n < 0)
+	{
+		keta += 1;
+		number *= -1;
+	}
+	keta += count_n(number);
 	str = malloc(sizeof(char) * (keta + 1));
 	if (!str)
 		return (NULL);
-	if (keta == 0)
-	{
-		str[0] = '0';
-		str[1] = '\0';
-		return (str);
-	}
-	if (keta < 0)
-	{
+	if (n < 0)
 		str[0] = '-';
-		keta = keta * -1;
-	}
-	str = ft_strlen(keta);
-	while (keta > 0)
+	str[keta] = '\0';
+	keta -= 1;
+	while ((n >= 0 && keta >= 0) || (n < 0 && keta > 0))
 	{
-		str = (keta % 10) + '0';
-		str--;
+		str[keta--] = (number % 10) + '0';
+		number /= 10;
 	}
 	return (str);
 }
 
-int	main(void)
-{
-	printf("%s\n", ft_itoa(123456789));
-	return (0);
-}
+// #include <limits.h>
+
+// int	main(void)
+// {
+// 	printf("str = %s\n", ft_itoa(-123456789));
+// 	printf("str = %s\n", ft_itoa(123456789));
+// 	printf("INT_MAX: str = %s\n", ft_itoa(INT_MAX));
+// 	printf("INT_MIN: str = %s\n", ft_itoa(INT_MIN));
+// 	return (0);
+// }

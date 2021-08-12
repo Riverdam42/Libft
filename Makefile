@@ -6,13 +6,14 @@
 #    By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/15 11:01:26 by kkawano           #+#    #+#              #
-#    Updated: 2021/08/08 17:42:24 by kkawano          ###   ########.fr        #
+#    Updated: 2021/08/12 17:21:46 by kkawano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 SRCS = ft_atoi.c\
+		ft_itoa.c\
 		ft_bzero.c\
 		ft_calloc.c\
 		ft_isalnum.c\

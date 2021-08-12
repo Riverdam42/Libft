@@ -6,43 +6,49 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:19:20 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/08 22:58:19 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/12 17:48:12 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-size_t ft_strlcpy (char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t src_len;
+	size_t	src_len;
 
 	if (!dst || !src)
 		return (0);
 	src_len = ft_strlen(src);
-	i = 0;
-	while (i < dstsize - 1 && i <= src_len)
+	if (src_len + 1 < dstsize)
+		ft_memcpy(dst, src, src_len + 1);
+	else if (dstsize != 0)
 	{
-			dst[i] = src[i];
-			i++;
+		ft_memcpy(dst, src, dstsize - 1);
+		dst[dstsize - 1] = '\0';
 	}
-	if (dstsize != 0)
-		dst[i] = '\0';
 	return (src_len);
 }
 
 // #include <stdio.h>
 
-// int     main(void)
+// size_t ft_strlcpy (char *dst, const char *src, size_t dstsize)
 // {
-//     char src[] = "coucou";
-//     char dest[10]; memset(dest, 'A', 10);
-//     printf("%zu\n", ft_strlcpy(dest, src, 0));
-//     printf("%zu\n", ft_strlcpy(dest, src, 1));
-//     printf("%zu\n", ft_strlcpy(dest, src, 2));
-//     printf("%zu\n", ft_strlcpy(dest, src, -1));
-//     printf("%zu\n", ft_strlcpy(dest, "1", 0));
+// 	size_t i;
+// 	size_t src_len;
+
+// 	if (!dst || !src)
+// 		return (0);
+// 	src_len = ft_strlen(src);
+// 	i = 0;
+// 	while (i < dstsize - 1 && i <= src_len)
+// 	{
+// 			dst[i] = src[i];
+// 			i++;
+// 	}
+// 	if (dstsize != 0)
+// 		dst[i] = '\0';
+// 	return (src_len);
 // }
 
 // int        main(void)
