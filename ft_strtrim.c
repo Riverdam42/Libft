@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:04:53 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/09 16:35:19 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/14 22:50:32 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	have_set(char const *set, char c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (set[i] != '\0')
@@ -32,6 +32,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	while (have_set(set, s1[start]) == 1)
 		start++;
