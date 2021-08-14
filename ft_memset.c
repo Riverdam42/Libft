@@ -6,39 +6,35 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 16:07:20 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/12 15:25:36 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/14 23:15:51 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memset(void *buf, int ch, size_t n)
+void	*ft_memset(void *buf, int ch, size_t n)
 {
-	char			*p;
+	unsigned char	*s;
 	size_t			i;
-	unsigned char	c;
 
-	p = buf;
-	c = (unsigned char)ch;
+	s = (unsigned char *)buf;
 	i = 0;
-	while (n)
+	while (i < n)
 	{
-		p[i] = (char )c;
+		s[i] = (unsigned char)ch;
 		i++;
-		n--;
 	}
-	return ((int )buf);
+	return (s);
 }
 
-/*
-#include <stdio.h>
+// #include <stdio.h>
 
-int		main(void)
-{
-	char	*result;
-	char	tab[100];
-	result = ft_memset(tab, 'A', 0);
-	printf("%d\n",result);
+// int		main(void)
+// {
+// 	char	*result;
+// 	char	tab[100];
+// 	result = ft_memset(tab, 'A', 0);
+// 	printf("%d\n",result);
 
 	//oid *buf = '0123456789';
 	//result = memset((buf+2, '*', 5);
@@ -47,5 +43,4 @@ int		main(void)
 	//result = ft_memset((void *)buf + 2, '*', 5);
 	//printf("自作 = %d\n", result);
 	//return 0;
-}
-*/
+// }

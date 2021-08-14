@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 22:01:47 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/14 20:30:51 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/15 00:29:23 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,21 +196,17 @@ char	**ft_split(char const *s, char c)
 		// 区切り文字が続く限り進める
 		while (*s == c)
 			s++;
-		// 開始位置は&nで渡す
 		// 文字の長さ = str_count(s, c, &開始位置)
 		run = str_count(s, c);
 		str = make_string(s, run);
 		if (!str)
-		{
 			ft_free(room_p);
-		}
 		// アドレスずらす
 		s += run + 1;
 		// 区切り文字が続く限り進める
 		while (*s == c)
 			s++;
-		room_p[i] = str;
-		i++;
+		room_p[i++] = str;
 	}
 	room_p[room_n] = NULL;
 	return (room_p);
