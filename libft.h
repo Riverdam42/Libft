@@ -7,7 +7,7 @@
 # include <ctype.h>
 # include <limits.h>
 
-int			ft_atoi(char *str);
+int			ft_atoi(const char *str);
 void		ft_bzero(void *s, size_t n);
 void		*malloc(size_t size);
 void		*ft_calloc(size_t count, size_t size);

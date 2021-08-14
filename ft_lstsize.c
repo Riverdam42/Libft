@@ -6,13 +6,13 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 22:47:36 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/09 16:49:50 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/12 20:33:30 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	*ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	size_t	num;
 

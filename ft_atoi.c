@@ -6,61 +6,63 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:28:11 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/11 19:39:48 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/13 14:43:16 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		check_esc(const char *str)
+static int	check_esc(const char *str)
 {
-	if((*str == ' ') || (*str == '\t') || (*str == '\n') ||
-			(*str == '\v') || (*str == '\r') || (*str == '\f'))
+	if ((*str == ' ') || (*str == '\t') || (*str == '\n')
+		|| (*str == '\v') || (*str == '\r') || (*str == '\f'))
 		return (1);
 	else
 		return (0);
 }
 
-int		ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	int result;
-	int sign;
-	int i;
+	long	result;
+	int		sign;
+	size_t	i;
 
 	result = 0;
 	sign = 1;
 	i = 0;
-	while (*str != '\0' && check_esc(str) == 1)
-		str++;
-	while (str[i] != '\0' && ((str[i] == '+') || (str[i] == '-')))
-	{
-		if (str[i] == '-')
-			sign = sign * -1;
+	while (str[i] != '\0' && check_esc(&str[i]))
 		i++;
-	}
+	if (str[i] == '+' || str[i] == '-')
+		if (str[i++] == '-')
+			sign *= -1;
 	while (str[i] != '\0' && (('0' <= str[i]) && (str[i] <= '9')))
 	{
-		result = result * 10;
-		result = result + str[i] - '0';
+		if ((result * 10 + (str[i] - '0')) / 10 != result)
+		{
+			if (sign == -1)
+				return (0);
+			else
+				return (-1);
+		}
+		result = (result * 10) + (str[i] - '0');
 		i++;
 	}
-	result = result * sign;
-	return ((int)result);
+	return ((int)result * sign);
 }
 
 // #include <stdio.h>
 
 // int		main(void)
 // {
-// 	char str1[] = "  ---+--+1234ab567";
+// 	char str1[] = "+1234ab567";
 // 	char str2[] = "123";
 // 	char str3[] = "-123";
 // 	char str4[] = "  -123";
-// 	char str5[] = "12a34";
-// 	char str6[] = "-12-34";
-// 	char str7[] = "+ + +123";
-// 	char str8[] = "a123b";
-// 	char str9[] = "abc";
+// 	char str5[] = "987654321";
+// 	char str6[] = "12-34";
+// 	char str7[] = "+123";
+// 	char str8[] = "2147483647";
+// 	char str9[] = "-2147483648";
 
 // 	printf("%d\n", ft_atoi(str1));
 // 	printf("%d\n", ft_atoi(str2));
@@ -69,7 +71,6 @@ int		ft_atoi(char *str)
 // 	printf("%d\n", ft_atoi(str5));
 // 	printf("%d\n", ft_atoi(str6));
 // 	printf("%d\n", ft_atoi(str7));
-// 	printf("%d\n", ft_atoi(str8));
-// 	printf("%d\n", ft_atoi(str9));
+// 	printf("INT_MAX = %d\n", ft_atoi(str8));
+// 	printf("INT_MIN = %d\n", ft_atoi(str9));
 // }
-
