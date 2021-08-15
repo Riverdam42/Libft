@@ -11,114 +11,18 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-// static void		*ft_free(char **room)
-// {
-//     size_t    i;
-
-//     i = 0;
-//     while (room[i])
-//     {
-//         free(room[i]);
-//         i++;
-//     }
-//     free(room);
-//     return (NULL);
-// }
-
-// static char	*make_string(const char *s, int i, int run)
-// {
-// 	size_t		index;
-// 	char	*string;
-
-// 	index = 0;
-// 	string = malloc(sizeof(char) * (run + 1));
-// 	if (!string)
-// 		return (NULL);
-// 	while (run > 0)
-// 	{
-// 		string[index] = s[i - run];
-// 		index++;
-// 		run--;
-// 	}
-// 	string[index] = '\0';
-// 	return (string);
-// }
-
-// static char	**chase_letter(const char *s, char **room_p, char c)
-// {
-// 	size_t		i;
-// 	int		run;
-// 	int		follow;
-// 	char	*str;
-
-// 	i = 0;
-// 	run = 0;
-// 	follow = 0;
-// 	while (s[i])
-// 	{
-// 		if (s[i] != c)
-// 			run++;
-// 		if ((s[i] == c || s[i + 1] == '\0') && run != 0)
-// 		{
-// 		if (s[i] != c && s[i + 1] == '\0')
-// 				i++;
-// 			str = make_string(s, i, run);
-// 			if (str == NULL)
-// 			{
-// 				ft_free(room_p);
-// 				return (NULL);
-// 			}
-// 			room_p[follow++] = str;
-// 			run = 0;
-// 		}
-// 		i++;
-// 	}
-// 	return (room_p);
-// }
-
-// char 	**ft_split(char const *s, char c)
-// {
-// 	int		room_n;
-// 	char	**result;
-// 	char	**room_p;
-// 	size_t		i;
-
-// 	if (!s)
-// 		return (NULL);
-// 	room_n = 0;
-// 	i = 0;
-// 	while (s[i])
-// 	{
-// 		if (s[i] != c)
-// 		{
-// 			if (s[i + 1] == c || s[i + 1] == '\0')
-// 				room_n++;
-// 		}
-// 		i++;
-// 	}
-// 	room_p = (char **)malloc(sizeof(char *) * (room_n + 1));
-// 	if (!room_p)
-// 		return (NULL);
-// 	result = chase_letter(s, room_p, c);
-// 	if (result == NULL)
-// 		return (ft_free(room_p));
-// 	result[room_n] = NULL;
-// 	return (result);
-// }
-
-static void	*ft_free(char **room_p)
+static void	*ft_free(char **block_p)
 {
 	size_t	i;
 
 	i = 0;
-	while (room_p[i])
+	while (block_p[i])
 	{
-		free(room_p[i]);
+		free(block_p[i]);
 		i++;
 	}
-	free(room_p);
+	free(block_p);
 	return (NULL);
 }
 
@@ -142,30 +46,40 @@ static size_t	chunk_n(const char *s, char c)
 }
 
 // mallocで1ブロック分の文字列を代入したポインタを返す
-static char	*make_string(const char *s, size_t run)
+static char	*make_string(const char *s, size_t str_n, char c)
 {
-	size_t	index;
+	size_t	i;
+	size_t	j;
 	char	*string;
 
-	index = 0;
-	string = malloc(sizeof(char) * (run + 1));
+	i = 0;
+	j = 0;
+	string = malloc(sizeof(char) * (str_n + 1));
 	if (!string)
 		return (NULL);
-	while (index < run)
+	while (s[i] == c)
+		i++;
+	str_n += i;
+	while (i < str_n)
 	{
-		string[index] = s[index];
-		index++;
+		string[j] = s[i];
+		j++;
+		i++;
 	}
-	string[index] = '\0';
+	string[j] = '\0';
 	return (string);
 }
 
 static size_t	str_count(const char *s, char c)
 {
+	size_t	i;
 	size_t	len;
 
+	i = 0;
 	len = 0;
-	while (s[len] != c && s[len])
+	while (s[i] == c)
+		i++;
+	while (s[i + len] != c && s[i + len])
 	{
 		len++;
 	}
@@ -174,50 +88,135 @@ static size_t	str_count(const char *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	run;
-	char	*str;
-	size_t	room_n;
-	char	**room_p;
+	char	**block_p;
+	size_t	block_n;
+	size_t	str_n;
 	size_t	i;
 
 	if (!s)
 		return (NULL);
-	room_n = 0;
-	run = 0;
-	// room_nを取得する
-	room_n = chunk_n(s, c);
-	room_p = (char **)malloc(sizeof(char *) * (room_n + 1));
-	if (!room_p)
+	block_n = chunk_n(s, c);
+	block_p = (char **)malloc(sizeof(char *) * (block_n + 1));
+	if (!block_p)
 		return (NULL);
-	// whileをつかってroom_pに1つずつmallocで確保した文字列を代入する
 	i = 0;
-	while (i < room_n)
+	while (i < block_n)
 	{
-		// 区切り文字が続く限り進める
+		str_n = str_count(s, c);
+		block_p[i] = make_string(s, str_n, c);
+		if (!block_p[i])
+			ft_free(block_p);
 		while (*s == c)
 			s++;
-		// 文字の長さ = str_count(s, c, &開始位置)
-		run = str_count(s, c);
-		str = make_string(s, run);
-		if (!str)
-			ft_free(room_p);
-		// アドレスずらす
-		s += run + 1;
-		// 区切り文字が続く限り進める
-		while (*s == c)
-			s++;
-		room_p[i++] = str;
+		s += str_n;
+		i++;
 	}
-	room_p[room_n] = NULL;
-	return (room_p);
+	block_p[block_n] = NULL;
+	return (block_p);
 }
+
+// static void		*ft_free(char **block)
+// {
+//     size_t    i;
+
+//     i = 0;
+//     while (block[i])
+//     {
+//         free(block[i]);
+//         i++;
+//     }
+//     free(block);
+//     return (NULL);
+// }
+
+// static char	*make_string(const char *s, int i, int str_n)
+// {
+// 	size_t		i;
+// 	char	*string;
+
+// 	i = 0;
+// 	string = malloc(sizeof(char) * (str_n + 1));
+// 	if (!string)
+// 		return (NULL);
+// 	while (str_n > 0)
+// 	{
+// 		string[i] = s[i - str_n];
+// 		i++;
+// 		str_n--;
+// 	}
+// 	string[i] = '\0';
+// 	return (string);
+// }
+
+// static char	**chase_letter(const char *s, char **block_p, char c)
+// {
+// 	size_t		i;
+// 	int		str_n;
+// 	int		follow;
+// 	char	*str;
+
+// 	i = 0;
+// 	str_n = 0;
+// 	follow = 0;
+// 	while (s[i])
+// 	{
+// 		if (s[i] != c)
+// 			str_n++;
+// 		if ((s[i] == c || s[i + 1] == '\0') && str_n != 0)
+// 		{
+// 		if (s[i] != c && s[i + 1] == '\0')
+// 				i++;
+// 			str = make_string(s, i, str_n);
+// 			if (str == NULL)
+// 			{
+// 				ft_free(block_p);
+// 				return (NULL);
+// 			}
+// 			block_p[follow++] = str;
+// 			str_n = 0;
+// 		}
+// 		i++;
+// 	}
+// 	return (block_p);
+// }
+
+// char 	**ft_split(char const *s, char c)
+// {
+// 	int		block_n;
+// 	char	**result;
+// 	char	**block_p;
+// 	size_t		i;
+
+// 	if (!s)
+// 		return (NULL);
+// 	block_n = 0;
+// 	i = 0;
+// 	while (s[i])
+// 	{
+// 		if (s[i] != c)
+// 		{
+// 			if (s[i + 1] == c || s[i + 1] == '\0')
+// 				block_n++;
+// 		}
+// 		i++;
+// 	}
+// 	block_p = (char **)malloc(sizeof(char *) * (block_n + 1));
+// 	if (!block_p)
+// 		return (NULL);
+// 	result = chase_letter(s, block_p, c);
+// 	if (result == NULL)
+// 		return (ft_free(block_p));
+// 	result[block_n] = NULL;
+// 	return (result);
+// }
 
 // #include <stdio.h>
 
 // int		main(void)
 // {
 // 	char **tab;
-// 	tab = ft_split("tripouille", 0);
+// 	tab = ft_split("kawano   kosuke 42 Tokyo", ' ');
+// 	printf("----result-----\n");
 
 // 	int i;
 // 	i = 0;
@@ -226,7 +225,7 @@ char	**ft_split(char const *s, char c)
 // 		printf("%s\n", tab[i]);
 // 		i++;
 // 	}
-// 	system("leaks a.out");
+// 	//system("leaks a.out");
 // 	return (0);
 // }
 

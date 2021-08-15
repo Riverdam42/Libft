@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:03:26 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/09 16:54:34 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/15 16:40:55 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!new_str)
 		return (0);
 	i = 0;
-	while (s1[i] != '\0')
+	while (s1[i])
 	{
 		new_str[i] = s1[i];
 		i++;
 	}
 	j = 0;
-	while (s2[j] != '\0')
+	while (s2[j])
 		new_str[i++] = s2[j++];
 	new_str[i] = '\0';
 	return (new_str);
