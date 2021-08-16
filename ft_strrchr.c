@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 17:41:29 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/14 22:11:42 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/16 18:37:10 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ char	*ft_strrchr(const char *s, int c)
 		i--;
 		if (s[i] == (char)c)
 			return ((char *)&s[i]);
-		else if (s[i] == '\0')
-			return (NULL);
 	}
 	return (NULL);
 }
