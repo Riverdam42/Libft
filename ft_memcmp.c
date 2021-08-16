@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 12:45:39 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/14 21:05:56 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/16 18:30:37 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ int	ft_memcmp(const void*s1, const void*s2, size_t n)
 			return (p1[i] - p2[i]);
 		i++;
 	}
-	if (i == n)
-		return (p1[n - 1] - p2[n - 1]);
-	return (p1[i] - p2[2]);
+	return (0);
 }
 
 // int main(void)

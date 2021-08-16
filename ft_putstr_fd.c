@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:16:15 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/14 22:52:17 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/16 18:34:47 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char *s, int fd)
 	if (!s)
 		return ;
 	i = 0;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
 		i++;
