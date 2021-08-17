@@ -6,7 +6,7 @@
 #    By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/15 11:01:26 by kkawano           #+#    #+#              #
-#    Updated: 2021/08/15 19:53:48 by kkawano          ###   ########.fr        #
+#    Updated: 2021/08/17 18:51:54 by kkawano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,7 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-RM = rm -f *.o
+RM = rm -f
 
 all: ${NAME}
 

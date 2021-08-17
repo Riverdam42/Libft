@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 12:44:54 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/17 15:08:48 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/17 16:51:34 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // 	printf("本家 = %s\n", memchr(s, -1, 5));
 // 	printf("自作 = %s\n", ft_memchr(s, -1, 5));
 // }
-
