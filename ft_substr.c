@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:01:17 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/16 01:28:02 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/17 12:17:43 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*new_str;
+	char			*new_str;
 	unsigned int	s_len;
 	size_t			i;
 
