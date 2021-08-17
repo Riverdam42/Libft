@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:03:26 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/16 18:42:39 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/15 16:40:55 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	new_str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!new_str)
-		return (NULL);
+		return (0);
 	i = 0;
 	while (s1[i])
 	{

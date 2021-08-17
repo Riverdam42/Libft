@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 23:06:58 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/16 20:36:33 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/09 16:51:14 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return (NULL);
+		return (lst);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);

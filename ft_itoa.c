@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:09:51 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/16 18:31:51 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/12 17:19:15 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,27 @@ static int	count_n(size_t n)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	long	digit;
+	long	keta;
 	long	number;
 
 	number = n;
-	digit = 0;
+	keta = 0;
 	if (n < 0)
 	{
-		digit += 1;
+		keta += 1;
 		number *= -1;
 	}
-	digit += count_n(number);
-	str = malloc(sizeof(char) * (digit + 1));
+	keta += count_n(number);
+	str = malloc(sizeof(char) * (keta + 1));
 	if (!str)
 		return (NULL);
 	if (n < 0)
 		str[0] = '-';
-	str[digit] = '\0';
-	digit -= 1;
-	while ((n >= 0 && digit >= 0) || (n < 0 && digit > 0))
+	str[keta] = '\0';
+	keta -= 1;
+	while ((n >= 0 && keta >= 0) || (n < 0 && keta > 0))
 	{
-		str[digit--] = (number % 10) + '0';
+		str[keta--] = (number % 10) + '0';
 		number /= 10;
 	}
 	return (str);

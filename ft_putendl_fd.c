@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:17:20 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/16 18:34:00 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/14 22:53:00 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	len;
+	int	length;
 
 	if (!s)
 		return ;
-	len = ft_strlen((char *) s);
-	write(fd, s, len);
+	length = ft_strlen((char *) s);
+	write(fd, s, length);
 	write(fd, "\n", 1);
 }

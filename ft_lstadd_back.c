@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 23:19:02 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/15 23:48:43 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/09 16:47:46 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	else
-	{
-		list = ft_lstlast(*lst);
-		list->next = new;
-	}
+	list = ft_lstlast(*lst);
+	list->next = new;
 }

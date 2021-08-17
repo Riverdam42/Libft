@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 16:22:33 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/16 18:40:05 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/14 23:20:51 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*str;
+	size_t	i;
 
 	if (count == 0 || size == 0)
 	{
@@ -22,9 +23,14 @@ void	*ft_calloc(size_t count, size_t size)
 		size = 1;
 	}
 	str = (void *)malloc(count * size);
-	if (!str)
+	if (str == NULL)
 		return (NULL);
-	ft_bzero(str, count * size);
+	i = 0;
+	while (i < count * size)
+	{
+		str[i] = '\0';
+		i++;
+	}
 	return (str);
 }
 
