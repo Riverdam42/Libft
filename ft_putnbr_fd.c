@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:18:39 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/16 18:46:04 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/17 12:18:16 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int nb, int fd)
 		sign = -1;
 		ft_putchar_fd('-', fd);
 	}
-	if (nb <= -10 || 10 <= nb )
+	if (nb <= -10 || 10 <= nb)
 	{
 		ft_putnbr_fd(nb / 10 * sign, fd);
 	}
