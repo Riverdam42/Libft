@@ -6,12 +6,11 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:19:20 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/17 18:55:28 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/17 22:31:31 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -52,5 +51,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // int		main(void)
 // {
 // 	printf("自作 = %zu\n", ft_strlcpy(NULL, NULL, 5));
-// 	printf("本家 = %lu\n", strlcpy(NULL, NULL, 5));
+// 	// printf("本家 = %lu\n", strlcpy(NULL, NULL, 5));
 // }

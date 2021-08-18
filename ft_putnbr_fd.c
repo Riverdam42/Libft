@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:18:39 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/17 12:18:16 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/17 22:00:35 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	long	sign;
+	int	sign;
 
 	sign = 1;
 	if (nb < 0)

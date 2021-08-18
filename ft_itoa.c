@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 16:09:51 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/16 18:31:51 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/17 22:23:14 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	str[digit] = '\0';
 	digit -= 1;
-	while ((n >= 0 && digit >= 0) || (n < 0 && digit > 0))
+	while ((0 <= n && 0 <= digit) || (0 > n && digit > 0))
 	{
 		str[digit--] = (number % 10) + '0';
 		number /= 10;

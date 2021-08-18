@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:25:40 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/17 11:30:36 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/17 22:55:47 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,18 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // int		main(void)
 // {
-// 	char str1[] = "TOKYO";
+// 	char str1[] = "TOKYO42";
 // 	char str2[] = "TOKYH";
 // 	char str3[] = "TO";
 
 // 	ft_strncmp(str1, str1, 5);
-// 	printf("%s,%s\n", str1, str1);
+// 	printf("%s compare %s\n", str1, str1);
 // 	printf("%d\n", ft_strncmp(str1, str1, 5));
 // 	ft_strncmp(str1, str2, 4);
-// 	printf("%s,%s\n", str1, str2);
+// 	printf("%s compare %s\n", str1, str2);
 // 	printf("%d\n", ft_strncmp(str1, str2, 4));
 // 	ft_strncmp(str1, str3, 2);
-// 	printf("%s,%s\n", str1, str3);
+// 	printf("%s compare %s\n", str1, str3);
 // 	printf("%d\n", ft_strncmp(str1, str3, 2));
 // 	return (0);
 // }

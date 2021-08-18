@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:26:50 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/17 11:26:00 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/18 12:11:54 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,28 +32,26 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (len1 + len2);
 }
 
-/*
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int main(void)
-{
-    char str1[10] = "42";
-    char str2[] = "Tokyo";
-    char str3[10] = "42";
-    char str4[] = "Tokyo";
-    int a;
-    int b;
+// int main(void)
+// {
+//     char str1[10] = "42";
+//     char str2[] = "Tokyo";
+//     char str3[10] = "42";
+//     char str4[] = "Tokyo";
+//     int a;
+//     int b;
 
-    printf("%s　and %s\n", str1, str2);
-	a = strlcat(str1, str2, 5);
-	printf ("%d\n", a);
-	printf("本家 = %s\n", str1);
-	printf("\n");
-    printf("%s and %s\n", str3, str4);
-    b = ft_strlcat(str3, str4, 5);
-    printf("%d\n", b);
-    printf("自作 = %s\n", str3);
-    return (0);
-}
-*/
+//     printf("%s　and %s\n", str1, str2);
+// 	a = strlcat(str1, str2, 0);
+// 	printf ("%d\n", a);
+// 	printf("本家 = %s\n", str1);
+// 	printf("\n");
+//     printf("%s and %s\n", str3, str4);
+//     b = ft_strlcat(str3, str4, 0);
+//     printf("%d\n", b);
+//     printf("自作 = %s\n", str3);
+//     return (0);
+// }

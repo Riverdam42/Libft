@@ -45,7 +45,6 @@ static size_t	chunk_n(const char *s, char c)
 	return (chunk);
 }
 
-// mallocで1ブロック分の文字列を代入したポインタを返す
 static char	*make_string(const char *s, size_t str_n, char c)
 {
 	size_t	i;

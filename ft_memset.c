@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 16:07:20 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/17 12:33:56 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/08/17 21:56:24 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *buf, int ch, size_t n)
 		s[i] = (unsigned char)ch;
 		i++;
 	}
-	return (s);
+	return (buf);
 }
 
 // #include <stdio.h>
