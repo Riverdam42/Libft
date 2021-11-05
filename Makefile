@@ -6,7 +6,7 @@
 #    By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/15 11:01:26 by kkawano           #+#    #+#              #
-#    Updated: 2021/08/18 11:53:29 by kkawano          ###   ########.fr        #
+#    Updated: 2021/11/05 16:42:02 by kkawano          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,6 +90,6 @@ fclean: clean
 re: fclean all
 
 bonus:
-			make WITH_BONUS=1
+	make WITH_BONUS=1
 
 .PHONY: all clean fclean re bonus
