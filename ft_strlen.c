@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:22:05 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/15 16:41:13 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/11/05 16:33:53 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,16 @@ size_t	ft_strlen(const char *str)
 	return (len);
 }
 
-/*
-#include <stdio.h>
+//#include <stdio.h>
 
-int		 main(void)
-{
-	char    str[] = "kawano";
-	char    *s;
-	int number;
+// int		 main(void)
+// {
+// 	char    str[] = "kawano";
+// 	char    *s;
+// 	int number;
 
-	s = str;
-	number = 0;
-	number = ft_strlen(s);
-	printf("文字の長さ=%d\n", number);
-}
-*/
+// 	s = str;
+// 	number = 0;
+// 	number = ft_strlen(s);
+// 	printf("文字の長さ=%d\n", number);
+// }

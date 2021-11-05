@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 15:18:35 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/09 16:20:16 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/11/05 16:27:42 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,12 @@ int	ft_isdigit(int c)
 		return (0);
 }
 
-/*
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-	char a = '$';
-	printf("1 = %d\n", ft_isdigit('0'));
-	printf("1 = %d\n", ft_isdigit('9'));
-	printf("0 = %d\n", ft_isdigit(a));
-}
-*/
+// int main(void)
+// {
+// 	char a = '$';
+// 	printf("1 = %d\n", ft_isdigit('0'));
+// 	printf("1 = %d\n", ft_isdigit('9'));
+// 	printf("0 = %d\n", ft_isdigit(a));
+// }

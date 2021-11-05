@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/05 16:40:08 by kkawano           #+#    #+#             */
+/*   Updated: 2021/11/05 16:40:11 by kkawano          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -42,6 +54,7 @@ char		**ft_split(char const *s, char c);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
+
 typedef struct s_list
 {
 	void			*content;

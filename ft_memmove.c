@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 19:38:05 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/16 01:10:40 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/11/05 16:28:37 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*d;
 	unsigned const char	*s;
 
-	d = (unsigned char *)dest;
-	s = (unsigned const char *)src;
 	if (!dest && !src)
 		return (NULL);
 	if (!n)
 		return (dest);
+	d = (unsigned char *)dest;
+	s = (unsigned const char *)src;
 	if (dest < src)
 	{
 		while (n--)
@@ -54,7 +54,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 // 	memmove(&str[0], &str[], 5);
 // 	printf("本家 = %s\n", str);
-// 	printf("\n");
 // 	ft_memmove(&str2[0], &str2[2], 5);
 // 	printf("自作 = %s\n ", str2);
 // }

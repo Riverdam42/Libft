@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 11:26:50 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/18 12:11:54 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/11/05 16:24:12 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 //     int a;
 //     int b;
 
-//     printf("%s　and %s\n", str1, str2);
+//     printf("%s and %s\n", str1, str2);
 // 	a = strlcat(str1, str2, 0);
 // 	printf ("%d\n", a);
 // 	printf("本家 = %s\n", str1);
-// 	printf("\n");
 //     printf("%s and %s\n", str3, str4);
 //     b = ft_strlcat(str3, str4, 0);
 //     printf("%d\n", b);

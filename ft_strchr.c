@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:33:50 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/17 22:12:49 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/11/05 16:20:57 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ char	*ft_strchr(const char *s, int c)
 // 	char *result;
 // 	result = strchr(str, ch1);
 // 	printf("本家 = %s\n", result);
-// 	printf("\n");
 // 	result = ft_strchr(str, ch1);
 // 	printf("自作 = %s\n", result);
 

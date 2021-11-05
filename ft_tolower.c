@@ -6,7 +6,7 @@
 /*   By: kkawano <kkawano@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 17:40:02 by kkawano           #+#    #+#             */
-/*   Updated: 2021/08/17 18:52:06 by kkawano          ###   ########.fr       */
+/*   Updated: 2021/11/05 16:37:52 by kkawano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,15 @@ int	ft_tolower(int c)
 		return (c);
 }
 
-/*
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-	char a = 'k';
-	char b = 'K';
-	char c = '*';
+// int main(void)
+// {
+// 	char a = 'k';
+// 	char b = 'K';
+// 	char c = '*';
 
-	printf("%c\n",ft_tolower(a));
-	printf("%c\n",ft_tolower(b));
-	printf("%c\n",ft_tolower(c));
-}
-*/
+// 	printf("%c\n",ft_tolower(a));
+// 	printf("%c\n",ft_tolower(b));
+// 	printf("%c\n",ft_tolower(c));
+// }
